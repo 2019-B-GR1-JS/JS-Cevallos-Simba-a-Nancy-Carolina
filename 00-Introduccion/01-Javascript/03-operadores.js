@@ -65,7 +65,7 @@
                 return valorActual===8;
             }
         );
-    console.log(respuestaFind);
+    console.log('respuesta find',respuestaFind);
     
         // buscar el indice de un elemento
     const respuestaFindIndex=
@@ -75,7 +75,7 @@
             }
         );
     
-        console.log(respuestaFindIndex);
+        console.log('respuesta findindex',respuestaFindIndex);
 
     const respuestaReduce=
         arreglo
@@ -84,9 +84,9 @@
                 return valorInicial+valorActual;
             },0)//valor inicial
         
-    console.log(respuestaReduce);
+    console.log('respuesta reduce',respuestaReduce);
 
-    const respuestaReduce=
+    /*const respuestaReduce=
         arreglo
         .reduce(
             (valorInicial, valorActual,indice,array)=>{
@@ -94,3 +94,4 @@
             },100)//valor inicial
     
     console.log(respuestaReduce);
+*/
