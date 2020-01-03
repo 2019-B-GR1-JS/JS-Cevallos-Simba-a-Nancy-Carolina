@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./modal-chat/modal-chat.module').then( m => m.ModalChatPageModule)
   },
   {
-    path: 'chat-amigo',
+    path: 'chat-amigo/:amigo',
     loadChildren: () => import('./chat-amigo/chat-amigo.module').then( m => m.ChatAmigoPageModule)
   }
 ];

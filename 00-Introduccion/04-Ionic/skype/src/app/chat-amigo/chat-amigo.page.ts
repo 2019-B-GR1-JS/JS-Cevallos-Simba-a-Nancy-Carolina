@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-chat-amigo',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-amigo.page.scss'],
 })
 export class ChatAmigoPage implements OnInit {
+  argumento = null;
 
-  constructor() { }
+  mensajes = [
+    {}
+  ]
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.argumento = this.activatedRoute.snapshot.paramMap.get('amigo');
   }
 
 }
