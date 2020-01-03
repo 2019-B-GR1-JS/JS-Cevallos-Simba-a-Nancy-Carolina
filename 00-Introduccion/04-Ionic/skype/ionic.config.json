@@ -1,0 +1,7 @@
+{
+  "name": "skype",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

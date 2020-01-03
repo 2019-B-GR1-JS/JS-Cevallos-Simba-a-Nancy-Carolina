@@ -1,0 +1,29 @@
+<h1>{{titulo}}</h1>
+<!-- {{}} -> Interpolacion  -->
+<!-- MOSTRAR HTML -->
+<!-- Acceder a metodos y propiedades de la clase -->
+<img width="ancho"
+     height="ancho"
+     [src]="imagen" alt="">
+<!-- Property Binding -->
+<!-- [atributo]="valor" -> Atributos -->
+<p>{{textoImagen}}</p>
+
+<!-- Event Binding -->
+<!-- [evento]="miFuncion($event)" -> Evento -->
+<button (click)="aumentarSueldo()"(click)="aumentarTamanio()"
+>
+  {{textoBoton}}
+
+</button>
+
+<label >Ingrese numero uno:</label>
+<input type="text" (keyup)="escucharNum($event)"  >
+
+<label >Ingrese numero dos:</label>
+<input type="text" (keyup)="escucharNum2($event)" >
+<h3>Resultados:</h3>
+<li>Suma: {{suma}}</li>
+<li>Resta: {{resta}}</li>
+<li>Division: {{multiplicacion}}</li>
+<li>Multiplicación: {{division}}</li>

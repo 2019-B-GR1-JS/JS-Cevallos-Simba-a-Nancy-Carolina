@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar padding-vertical>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="abrirModal()">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-fab horizontal="center" vertical="top">
+        <ion-avatar>
+          <img src="assets/imagenes/perfil.jpg">
+        </ion-avatar>
+      </ion-fab>
+
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="nuevoChat()">
+        <ion-icon slot="icon-only" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-searchbar showCancelButton="focus" placeholder="Personas, grupos y mensajes"></ion-searchbar>
+    </ion-list-header>
+    <ion-item *ngFor="let contacto of contactos" (click)="abrirChat(contacto.nombre)">
+      <ion-avatar slot="start">
+        <img src="{{contacto.imagen}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{contacto.nombre}}</h2>
+        <p>{{contacto.mensaje}}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
