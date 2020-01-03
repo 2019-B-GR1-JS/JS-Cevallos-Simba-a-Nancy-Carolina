@@ -4,6 +4,7 @@
     <list default="true" id="3ede2f46-8f53-4411-a8ea-61c9b4df67fa" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/00-Introduccion/01-Javascript/06-sync-async.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/00-Introduccion/01-Javascript/07-promesas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/00-Introduccion/02-TypeScript/01-introduccion.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

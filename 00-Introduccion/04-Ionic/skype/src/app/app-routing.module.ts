@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'modal-chat',
     loadChildren: () => import('./modal-chat/modal-chat.module').then( m => m.ModalChatPageModule)
+  },
+  {
+    path: 'chat-amigo',
+    loadChildren: () => import('./chat-amigo/chat-amigo.module').then( m => m.ChatAmigoPageModule)
   }
 ];
 @NgModule({
