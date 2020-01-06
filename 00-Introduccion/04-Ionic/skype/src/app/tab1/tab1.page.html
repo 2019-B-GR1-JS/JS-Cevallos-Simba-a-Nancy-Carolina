@@ -7,7 +7,7 @@
     </ion-buttons>
     <ion-title>
       <ion-fab horizontal="center" vertical="top">
-        <ion-avatar>
+        <ion-avatar (click)="abrirPerfil()">
           <img src="assets/imagenes/perfil.jpg">
         </ion-avatar>
       </ion-fab>
@@ -24,9 +24,21 @@
 <ion-content>
   <ion-list>
     <ion-list-header>
-      <ion-searchbar showCancelButton="focus" placeholder="Personas, grupos y mensajes"></ion-searchbar>
+      <ion-row margin-bottom>
+        <ion-col size="11">
+          <ion-searchbar placeholder="Personas, grupos y mensajes"></ion-searchbar>
+        </ion-col>
+        <ion-col size="1" align-self-center>
+          <ion-icon name="funnel" (click)="abirOpciones()"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="funnel"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-list-header>
-    <ion-item *ngFor="let contacto of contactos" (click)="abrirChat(contacto.nombre)">
+    <ion-item *ngFor="let contacto of contactos" (click)="abrirChat(contacto.id)">
       <ion-avatar slot="start">
         <img src="{{contacto.imagen}}">
       </ion-avatar>
@@ -34,7 +46,11 @@
         <h2>{{contacto.nombre}}</h2>
         <p>{{contacto.mensaje}}</p>
       </ion-label>
+      <ion-note slot="end">
+        {{contacto.ultima_conexion}}
+      </ion-note>
     </ion-item>
 
   </ion-list>
 </ion-content>
+

@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button (click)="cerrarPerfil()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+        <img width="30" src="assets/imagenes/microsoft.png">
+    </ion-title>
+    <ion-buttons slot="primary">
+      <p>Cerrar sesión</p>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img src="assets/imagenes/perfil.jpg">
+      </ion-avatar>
+      <ion-label>
+        <h2>Carolina Cevallos</h2>
+        <p>carito_kt@hotmail.com</p>
+        <a href="">Mi cuenta de Microsoft</a>
+      </ion-label>
+
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item-sliding>
+
+      <ion-item-options>
+        <ion-item-option >Ausente</ion-item-option>
+        <ion-item-option >No molestar</ion-item-option>
+        <ion-item-option >Invisible</ion-item-option>
+      </ion-item-options>
+      <ion-item>
+        <ion-badge color="success" slot="start">.</ion-badge>
+        <ion-label>En linea</ion-label>
+        <ion-icon slot="end" name="arrow-dropdown"></ion-icon>
+      </ion-item>
+
+    </ion-item-sliding>
+    <ion-item>
+      <ion-icon slot="start" name="megaphone"></ion-icon>
+      <ion-label><p> Comparte lo que estás haciendo</p></ion-label>
+      <ion-icon slot="end" name="brush"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="bookmark"></ion-icon>
+      <ion-label> Marcadores</ion-label>
+    </ion-item>
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>ADMINISTRAR</ion-label>
+      </ion-item-divider>
+      <ion-item>
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label> Perfil de Skype</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="logo-skype"></ion-icon>
+        <ion-label> Skype a teléfono
+          <p>LLama a teléfonos a precios asequibles</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="call"></ion-icon>
+        <ion-label> Número de Skype
+          <p>Más información</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="settings"></ion-icon>
+        <ion-label> Configuración</ion-label>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>

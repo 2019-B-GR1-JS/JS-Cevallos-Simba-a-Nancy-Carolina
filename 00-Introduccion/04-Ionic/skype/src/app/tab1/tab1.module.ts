@@ -8,11 +8,14 @@ import {MiModalPage} from '../mi-modal/mi-modal.page';
 import {MiModalPageModule} from '../mi-modal/mi-modal.module';
 import {ModalChatPage} from '../modal-chat/modal-chat.page';
 import {ModalChatPageModule} from '../modal-chat/modal-chat.module';
+import {ModalPerfilPage} from '../modal-perfil/modal-perfil.page';
+import {ModalPerfilPageModule} from '../modal-perfil/modal-perfil.module';
 
 @NgModule({
   entryComponents: [
     MiModalPage,
-    ModalChatPage
+    ModalChatPage,
+    ModalPerfilPage
   ],
   imports: [
     IonicModule,
@@ -20,7 +23,8 @@ import {ModalChatPageModule} from '../modal-chat/modal-chat.module';
     FormsModule,
     RouterModule.forChild([{ path: '', component: Tab1Page }]),
     MiModalPageModule,
-    ModalChatPageModule
+    ModalChatPageModule,
+    ModalPerfilPageModule
   ],
   declarations: [Tab1Page]
 })
