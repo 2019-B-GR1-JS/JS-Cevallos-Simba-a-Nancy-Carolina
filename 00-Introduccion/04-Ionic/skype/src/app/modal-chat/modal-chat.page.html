@@ -15,113 +15,23 @@
   <ion-searchbar showCancelButton="focus" placeholder="Personas, grupos y mensajes"></ion-searchbar>
   <ion-list>
     <ion-list-header>SUGERIDOS</ion-list-header>
-    <ion-item>
+    <ion-item *ngFor="let contacto of contactos" (click)="abrirChat(contacto.id)">
       <ion-avatar slot="start">
-        <img src="https://i.pinimg.com/originals/1c/da/6d/1cda6db0c845f3d486f6d13fca9f3e3e.png">
+        <img src="{{contacto.imagen}}">
       </ion-avatar>
       <ion-label>
-        <h2>Sara Selena</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="http://assets.cdnelnuevodiario.com/ckeditor/2017/08/01/tom-halland.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Han</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuMmV03b7xjb5WTclX7P1Aq2CbB2md4Yt5bP_gI6i86M7e2icE&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Rey</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7N_Zf5qAOAsYAjVYRYXsjJk57csMhqHktwr9Mi69MQ4ednwF&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="http://elheraldoslp.com.mx/wp-content/uploads/2015/04/adam-sandler-net-worth.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpvwYWTnDMGrfrQLqSfWIgtv7e39mmyHecvoj1ff_9y_4BYE4&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
+        <h2>{{contacto.nombre}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>
   <ion-list>
     <ion-list-header>PERSONAS</ion-list-header>
-    <ion-item>
+    <ion-item *ngFor="let contacto of contactos" (click)="abrirChat(contacto.nombre)">
       <ion-avatar slot="start">
-        <img src="https://i.pinimg.com/originals/1c/da/6d/1cda6db0c845f3d486f6d13fca9f3e3e.png">
+        <img src="{{contacto.imagen}}">
       </ion-avatar>
       <ion-label>
-        <h2>Finn</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="http://assets.cdnelnuevodiario.com/ckeditor/2017/08/01/tom-halland.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Han</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuMmV03b7xjb5WTclX7P1Aq2CbB2md4Yt5bP_gI6i86M7e2icE&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Rey</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7N_Zf5qAOAsYAjVYRYXsjJk57csMhqHktwr9Mi69MQ4ednwF&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="http://elheraldoslp.com.mx/wp-content/uploads/2015/04/adam-sandler-net-worth.png">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
-      </ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpvwYWTnDMGrfrQLqSfWIgtv7e39mmyHecvoj1ff_9y_4BYE4&s">
-      </ion-avatar>
-      <ion-label>
-        <h2>Luke</h2>
+        <h2>{{contacto.nombre}}</h2>
       </ion-label>
     </ion-item>
   </ion-list>
