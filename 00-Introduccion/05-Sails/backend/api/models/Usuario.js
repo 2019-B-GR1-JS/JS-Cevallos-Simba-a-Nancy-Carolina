@@ -19,6 +19,10 @@ module.exports = {
     },
     password: {
       type:'string'
+    },
+    librosDelUsuario: {
+      collection: 'Libro',
+      via: 'idUsuario'
     }
   },
 

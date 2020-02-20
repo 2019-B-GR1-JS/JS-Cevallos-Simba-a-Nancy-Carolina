@@ -7,11 +7,38 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {UsuarioRestService} from "./services/rest/usuario-rest.service";
 import {ButtonModule, InputTextModule, TableModule} from "primeng";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatInputModule} from '@angular/material/input';
+import { ModalEditarUsuarioComponent } from './modales/modal-editar-usuario/modal-editar-usuario.component';
+import {MatDialogModule} from "@angular/material";
 
+import { RutaInicioComponent } from './rutas/ruta-inicio/ruta-inicio.component';
+import { RutaLoginComponent } from './rutas/ruta-login/ruta-login.component';
+import { RutaGestionUsuariosComponent } from './rutas/ruta-gestion-usuarios/ruta-gestion-usuarios.component';
+import { RutaGestionLibrosComponent } from './rutas/ruta-gestion-libros/ruta-gestion-libros.component';
+import { RutaCrearLibroComponent } from './rutas/ruta-crear-libro/ruta-crear-libro.component';
+import { RutaEditarLibroComponent } from './rutas/ruta-editar-libro/ruta-editar-libro.component';
+import { RutaBuscarLibroComponent } from './rutas/ruta-buscar-libro/ruta-buscar-libro.component';
+import { ModalCrearUsuarioComponent } from './modales/modal-crear-usuario/modal-crear-usuario.component';
+import {LibroRestService} from "./services/rest/libro-rest.service";
+import {AuthService} from "./services/auth/auth.service";
+import {EstaLogueadoPolicy} from "./services/auth/politicas/esta-logueado.policy";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalEditarUsuarioComponent,
+    RutaInicioComponent,
+    RutaLoginComponent,
+    RutaGestionUsuariosComponent,
+    RutaGestionLibrosComponent,
+    RutaCrearLibroComponent,
+    RutaEditarLibroComponent,
+    RutaBuscarLibroComponent,
+    ModalCrearUsuarioComponent,
+  ],
+  entryComponents:[
+    ModalEditarUsuarioComponent
   ],
   imports: [
     BrowserModule,//Directivas: nfGor,ngIf
@@ -20,10 +47,16 @@ import {ButtonModule, InputTextModule, TableModule} from "primeng";
     HttpClientModule,//HTTP
     ButtonModule,
     TableModule,
-    InputTextModule
+    InputTextModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatDialogModule,
   ],
   providers: [
-    UsuarioRestService
+    UsuarioRestService,
+    LibroRestService,
+    AuthService,
+    EstaLogueadoPolicy
   ],//servicios de la aplicacion
   bootstrap: [AppComponent]
 })
